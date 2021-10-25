@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
  
- 
 url = 'https://www.w3schools.com/' #You can choose any public website that you want
 reqs = requests.get(url)
 soup = BeautifulSoup(reqs.text, 'html.parser')
@@ -21,7 +20,6 @@ for line in webpages_file:
     print(line)
 webpages_file.close()
 
-
 #Ask the user to enter a webpage name
 value = input("Please enter a wbpage name: \n")
 
@@ -36,6 +34,7 @@ for line in webpages_file:
    if value in line:
        flag = 1
        break
+      
 #if the webpage is not found print 404
 if flag ==0:
     print("404")
